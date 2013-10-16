@@ -8,9 +8,14 @@ using CrashReport.Domain.Entities;
 
 namespace CrashReport.Domain.Concrete
 {
-    public class EFReportRepository : IReportRepository
+    public class EFRepository : IRepository
     {
         private EFDbContext context = new EFDbContext();
+
+        public IQueryable<Application> GetApplications()
+        {
+            return context.Applications;
+        }
 
         public IQueryable<Report> GetReports()
         {

@@ -9,9 +9,9 @@ namespace CrashReport.WebUI.Controllers
 {
     public class ReportsController : Controller
     {
-        private IReportRepository repository;
+        private IRepository repository;
 
-        public ReportsController(IReportRepository repo)
+        public ReportsController(IRepository repo)
         {
             repository = repo;
         }

@@ -3,8 +3,10 @@ using System.Linq;
 
 namespace CrashReport.Domain.Abstract
 {
-    public interface IReportRepository
+    public interface IRepository
     {
+        IQueryable<Application> GetApplications();
+
         IQueryable<Report> GetReports();
     }
 }

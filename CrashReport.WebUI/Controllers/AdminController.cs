@@ -9,16 +9,16 @@ namespace CrashReport.WebUI.Controllers
 {
     public class AdminController : Controller
     {
-        private IReportRepository repository;
+        private IRepository repository;
 
-        public AdminController(IReportRepository repo)
+        public AdminController(IRepository repo)
         {
             repository = repo;
         }
 
         public ActionResult Index()
         {
-            return View();
+            return View(repository.GetApplications());
         }
 
     }

@@ -23,7 +23,7 @@ namespace CrashReport.WebUI.Infrastructure
 
         private void AddBindings()
         {
-            kernel.Bind<IReportRepository>().To<DummyReportRepository>();
+            kernel.Bind<IRepository>().To<DummyRepository>();
         }
     }
 }

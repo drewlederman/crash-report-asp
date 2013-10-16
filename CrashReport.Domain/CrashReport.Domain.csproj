@@ -44,12 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\IReportRepository.cs" />
-    <Compile Include="Concrete\DummyReportRepository.cs" />
+    <Compile Include="Abstract\IRepository.cs" />
+    <Compile Include="Concrete\DummyRepository.cs" />
     <Compile Include="Concrete\EFDbContext.cs" />
-    <Compile Include="Concrete\EFReportRepository.cs" />
+    <Compile Include="Concrete\EFRepository.cs" />
     <Compile Include="Entities\Application.cs" />
-    <Compile Include="Entities\CrashReport.cs" />
+    <Compile Include="Entities\Report.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
