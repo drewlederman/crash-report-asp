@@ -1,0 +1,15 @@
+﻿@model IEnumerable<CrashReport.Domain.Entities.Report>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@foreach (var report in Model)
+{
+    <div>
+        <h3>@report.AppName @report.AppVersion</h3>
+        <p>@report.StackTrace</p>
+    </div>
+}
