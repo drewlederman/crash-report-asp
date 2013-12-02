@@ -18,25 +18,33 @@ namespace CrashReport.Domain.Concrete
                 {
                     ApplicationId = 1,
                     Name = "DummyApp",
-                    Version = "1.0",
-                    BinaryPath = "~/Files/Debug/DummyApp/1.0/DummyApp.exe",
-                    SymbolPath = "~/Files/Debug/DummyApp/1.0/DummyApp.pdb"
+                    IconFile = "Default.png",
+                    Versions = new List<ApplicationVersion>
+                    {
+                        new ApplicationVersion
+                        {
+                            ApplicationId = 1,
+                            ApplicationVersionId = 1,
+                            Version = "1.0",
+                            DebugPath = "~/Files/Apps/1/1/"
+                        }
+                    }
                 },
                 new Application
                 {
                     ApplicationId = 2,
-                    Name = "DummyApp",
-                    Version = "2.0",
-                    BinaryPath = "~/Files/Debug/DummyApp/2.0/DummyApp.exe",
-                    SymbolPath = "~/Files/Debug/DummyApp/2.0/DummyApp.pdb"
-                },
-                new Application
-                {
-                    ApplicationId = 3,
                     Name = "MyApp",
-                    Version = "1.0",
-                    BinaryPath = "~/Files/Debug/MyApp/1.0/MyApp.exe",
-                    SymbolPath = "~/Files/Debug/MyApp/1.0/MyApp.pdb"
+                    IconFile = "Default.png",
+                    Versions = new List<ApplicationVersion>
+                    {
+                        new ApplicationVersion
+                        {
+                            ApplicationId = 2,
+                            ApplicationVersionId = 1,
+                            Version = "1.0",
+                            DebugPath = "~/Files/Apps/2/1/"
+                        }
+                    }
                 }
             }.AsQueryable();
         }

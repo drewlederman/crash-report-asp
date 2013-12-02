@@ -49,6 +49,7 @@
     <Compile Include="Concrete\EFDbContext.cs" />
     <Compile Include="Concrete\EFRepository.cs" />
     <Compile Include="Entities\Application.cs" />
+    <Compile Include="Entities\ApplicationVersion.cs" />
     <Compile Include="Entities\Report.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

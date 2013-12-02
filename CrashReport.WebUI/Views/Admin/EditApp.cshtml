@@ -1,0 +1,48 @@
+﻿@using CrashReport.WebUI.Util;
+@model CrashReport.Domain.Entities.Application
+
+@{
+    ViewBag.Title = "EditApp";
+}
+
+<h2>EditApp</h2>
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Application</legend>
+
+        @Html.HiddenFor(model => model.ApplicationId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IconFile)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.IconFile, new { type = "file" })
+            @Html.ValidationMessageFor(model => model.IconFile)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

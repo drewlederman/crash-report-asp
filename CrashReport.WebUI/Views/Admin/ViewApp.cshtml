@@ -1,0 +1,28 @@
+﻿@using CrashReport.WebUI.Util;
+@model CrashReport.Domain.Entities.Application
+
+@{
+    ViewBag.Title = @Model.Name;
+}
+
+<div class="application-info">
+    <img class="application-icon" src="@Utilities.GetAppIconPath(Model)"/>
+    <div class="application-name">@Model.Name</div>
+    @Html.ActionLink("Edit", "EditApp", new { id = Model.ApplicationId })
+</div>
+<div class="clear-fix"></div>
+
+<p>Versions</p>
+<div class="versions-container">
+    @foreach (var ver in Model.Versions)
+    {
+        <div class="version-info">
+            @ver.Version 
+            @Html.ActionLink("Edit", "EditVersion", new { id = ver.ApplicationVersionId }) |
+            @Html.ActionLink("Delete", "DeleteVersion", new { id = ver.ApplicationVersionId })
+        </div> 
+    }
+</div>
+<p>
+    @Html.ActionLink("Add Version", "AddVersion", new { @class = "button" })
+</p>

@@ -35,6 +35,16 @@ textarea {
     margin: 0.5em 0 0 0;
 }
 
+input {
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+}
+
+    input[type=button],
+    input[type=submit] {
+        border: solid 1px black;
+        background-color: #f6f6f6;
+    }
+
 
 /* Styles for validation helpers
 -----------------------------------------------------------*/
@@ -58,4 +68,88 @@ textarea {
 
 .validation-summary-valid {
     display: none;
+}
+
+/* Admin area 
+-----------------------------------------------------------*/
+
+.application-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.application-item {
+    width: 175px;
+    height: 175px;
+    margin: 20px;
+    background-color: #f6f6f6;
+    border: solid 1px #b7b6b6;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ddd;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    float: left;
+}
+
+    .application-item:hover {
+        background-color: #fdfdfd;
+    }
+
+    .application-item .application-icon {
+        margin-top: 40px;
+    }
+
+    .application-item .application-name {
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 5px;
+    }
+
+    .application-item .application-versions {
+        margin-top: 3px;
+    }
+
+.application-info {
+    margin-bottom: 15px;
+}
+.application-info * {
+    float: left;
+}
+
+.application-info .application-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 5px 10px 0 10px;
+}
+
+.application-info a {
+    margin-top: 12px;
+}
+
+.versions-container {
+    margin: 10px 0 10px 0;
+}
+
+.version-info {
+    font-size: 16px;
+}
+
+/* Helpers
+-----------------------------------------------------------*/
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.clear-fix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
 }
